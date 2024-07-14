@@ -1,7 +1,7 @@
 import type { Direction, ImMoving, Player } from "./common.mjs";
 import * as common from "./common.mjs";
 
-const DIRECTION_KEYS: { [key: string]: Direction } = {
+const DIRECTION_KEYS: Record<string, Direction> = {
   ArrowLeft: "left",
   ArrowRight: "right",
   ArrowUp: "up",

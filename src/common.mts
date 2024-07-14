@@ -9,12 +9,10 @@ export const PLAYER_SPEED = 500;
 
 export type Direction = "left" | "right" | "up" | "down";
 
-type Moving = {
-  [key in Direction]: boolean;
-};
+type Moving = Record<Direction, boolean>;
 
 export type Vector2 = { x: number; y: number };
-export const DIRECTION_VECTORS: { [key in Direction]: Vector2 } = {
+export const DIRECTION_VECTORS: Record<Direction, Vector2> = {
   left: { x: -1, y: 0 },
   right: { x: 1, y: 0 },
   up: { x: 0, y: -1 },
